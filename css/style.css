@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: hsl(240, 6%, 50%);
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.attribution {
+  padding-bottom: 1rem;
+  font-size: 0.6875rem;
+  text-align: center;
+  color: hsl(240, 5%, 91%);
+}
+.attribution a {
+  color: hsl(14, 88%, 65%);
+}
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  width: 96%;
+  max-width: 327px;
+  background: url("../images/bg-pattern-mobile.svg") center top no-repeat white;
+  border-radius: 24px;
+}
+@media (max-width: 539px) {
+  .card {
+    margin-top: 110px;
+  }
+}
+@media (min-width: 540px) {
+  .card {
+    background-image: url("../images/bg-pattern-desktop.svg");
+  }
+}
+.card__top {
+  position: relative;
+  padding-top: 106px;
+}
+.card__image {
+  width: 240px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -109px;
+}
+.card__body {
+  padding: 24px 24px 48px;
+}
+.card__title {
+  font-size: 32px;
+  text-align: center;
+  color: hsl(237, 12%, 33%);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.accordion-item__header {
+  padding: 16px 0;
+  font-size: 13px;
+  color: hsl(237, 12%, 33%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-item__header::after {
+  content: url("../images/icon-arrow-down.svg");
+}
+.accordion-item__header--active {
+  font-weight: 700;
+}
+.accordion-item__header--active::after {
+  transform: rotate(180deg);
+}
+.accordion-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  opacity: 0;
+}
+.accordion-item__content::after {
+  content: "";
+  display: block;
+  height: 16px;
+}
+.accordion-item__content--visible {
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
