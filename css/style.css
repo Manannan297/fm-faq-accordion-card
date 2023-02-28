@@ -152,17 +152,12 @@ body {
 }
 .accordion-item__header::after {
   content: url("../images/icon-arrow-down.svg");
+  transition: transform 0.3s ease;
 }
 @media (min-width: 540px) {
   .accordion-item__header::after {
     padding: 0 1rem;
   }
-}
-.accordion-item__header--active {
-  font-weight: 700;
-}
-.accordion-item__header--active::after {
-  transform: rotate(180deg);
 }
 @media (min-width: 540px) {
   .accordion-item__header {
@@ -180,7 +175,13 @@ body {
   display: block;
   height: 16px;
 }
-.accordion-item__content--visible {
+.accordion-item--active .accordion-item__header {
+  font-weight: 700;
+}
+.accordion-item--active .accordion-item__header::after {
+  transform: rotate(-180deg);
+}
+.accordion-item--active .accordion-item__content {
   opacity: 1;
 }
 
