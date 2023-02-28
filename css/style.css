@@ -46,104 +46,102 @@ body {
 
 .card {
   width: 96%;
-  max-width: 327px;
+  max-width: 31.25rem;
   background: url("../images/bg-pattern-mobile.svg") center top no-repeat white;
-  border-radius: 24px;
+  border-radius: 1.5rem;
 }
-@media (max-width: 539px) {
+@media (max-width: 991px) {
   .card {
-    margin-top: 110px;
+    margin-top: 6.875rem;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .card {
     background-image: url("../images/bg-pattern-desktop.svg");
-    background-position: -578px -295px;
-    max-width: 920px;
+    background-position: -36.125rem -18.375rem;
+    max-width: 57.5rem;
     display: flex;
   }
 }
 .card__top {
   position: relative;
 }
-@media (max-width: 539px) {
+@media (max-width: 991px) {
   .card__top {
-    padding-top: 106px;
+    padding-top: 6.625rem;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .card__top {
     width: 50%;
-    padding-top: 70px;
+    padding-top: 4.375rem;
   }
   .card__top::after {
-    content: "";
-    width: 191px;
-    height: 184px;
-    background-image: url("../images/illustration-box-desktop.svg");
+    content: url(../images/illustration-box-desktop.svg);
+    line-height: 1;
     position: absolute;
-    top: 204px;
-    left: -92px;
+    top: 12.75rem;
+    left: -5.75rem;
     animation: bounce 2s ease infinite;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .card__image-wrap {
     display: block;
     overflow: hidden;
   }
 }
-@media (max-width: 539px) {
+@media (max-width: 991px) {
   .card__image {
-    width: 240px;
+    width: 15rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -109px;
+    top: -6.8125rem;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .card__image {
-    margin-left: -84px;
+    margin-left: -5.25rem;
   }
 }
 .card__body {
-  padding: 24px 24px 48px;
+  padding: 1.5rem 1.5rem 3rem;
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .card__body {
     width: 50%;
-    padding: 64px 16px 90px;
+    padding: 4rem 1rem 5.625rem;
   }
 }
 .card__title {
-  font-size: 32px;
+  font-size: 2rem;
   color: hsl(237, 12%, 33%);
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
-@media (max-width: 539px) {
+@media (max-width: 991px) {
   .card__title {
     text-align: center;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .card__title {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .accordion {
-    max-width: 350px;
+    max-width: 21.875rem;
   }
 }
 .accordion-item {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 .accordion-item__header {
-  padding: 16px 0;
-  font-size: 13px;
+  padding: 1rem 0;
+  font-size: 0.8125rem;
   color: hsl(237, 12%, 33%);
   display: flex;
   justify-content: space-between;
@@ -154,14 +152,14 @@ body {
   content: url("../images/icon-arrow-down.svg");
   transition: transform 0.3s ease;
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .accordion-item__header::after {
     padding: 0 1rem;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 992px) {
   .accordion-item__header {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .accordion-item__content {
@@ -173,7 +171,7 @@ body {
 .accordion-item__content::after {
   content: "";
   display: block;
-  height: 16px;
+  height: 1rem;
 }
 .accordion-item--active .accordion-item__header {
   font-weight: 700;
@@ -190,9 +188,9 @@ body {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-2rem);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-1rem);
   }
 }/*# sourceMappingURL=style.css.map */
