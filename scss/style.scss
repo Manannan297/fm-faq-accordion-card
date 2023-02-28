@@ -159,6 +159,11 @@ body {
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+      transition: color 0.3 ease;
+
+      &:hover {
+        color: $color-soft-red;
+      }
 
       &::after {
         content: url("../images/icon-arrow-down.svg");

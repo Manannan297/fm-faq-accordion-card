@@ -147,6 +147,10 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  transition: color 0.3 ease;
+}
+.accordion-item__header:hover {
+  color: hsl(14, 88%, 65%);
 }
 .accordion-item__header::after {
   content: url("../images/icon-arrow-down.svg");
