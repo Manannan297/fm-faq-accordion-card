@@ -58,30 +58,86 @@ body {
 @media (min-width: 540px) {
   .card {
     background-image: url("../images/bg-pattern-desktop.svg");
+    background-position: -578px -295px;
+    max-width: 920px;
+    display: flex;
   }
 }
 .card__top {
   position: relative;
-  padding-top: 106px;
 }
-.card__image {
-  width: 240px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -109px;
+@media (max-width: 539px) {
+  .card__top {
+    padding-top: 106px;
+  }
+}
+@media (min-width: 540px) {
+  .card__top {
+    width: 50%;
+    padding-top: 70px;
+  }
+  .card__top::after {
+    content: "";
+    width: 191px;
+    height: 184px;
+    background-image: url("../images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 204px;
+    left: -92px;
+    animation: bounce 2s ease infinite;
+  }
+}
+@media (min-width: 540px) {
+  .card__image-wrap {
+    display: block;
+    overflow: hidden;
+  }
+}
+@media (max-width: 539px) {
+  .card__image {
+    width: 240px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -109px;
+  }
+}
+@media (min-width: 540px) {
+  .card__image {
+    margin-left: -84px;
+  }
 }
 .card__body {
   padding: 24px 24px 48px;
 }
+@media (min-width: 540px) {
+  .card__body {
+    width: 50%;
+    padding: 64px 16px 90px;
+  }
+}
 .card__title {
   font-size: 32px;
-  text-align: center;
   color: hsl(237, 12%, 33%);
   margin-top: 0;
   margin-bottom: 16px;
 }
+@media (max-width: 539px) {
+  .card__title {
+    text-align: center;
+  }
+}
+@media (min-width: 540px) {
+  .card__title {
+    margin-bottom: 24px;
+  }
+}
 
+@media (min-width: 540px) {
+  .accordion {
+    max-width: 350px;
+  }
+}
 .accordion-item {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
@@ -97,11 +153,21 @@ body {
 .accordion-item__header::after {
   content: url("../images/icon-arrow-down.svg");
 }
+@media (min-width: 540px) {
+  .accordion-item__header::after {
+    padding: 0 1rem;
+  }
+}
 .accordion-item__header--active {
   font-weight: 700;
 }
 .accordion-item__header--active::after {
   transform: rotate(180deg);
+}
+@media (min-width: 540px) {
+  .accordion-item__header {
+    font-size: 14px;
+  }
 }
 .accordion-item__content {
   max-height: 0;
@@ -116,4 +182,16 @@ body {
 }
 .accordion-item__content--visible {
   opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }/*# sourceMappingURL=style.css.map */
